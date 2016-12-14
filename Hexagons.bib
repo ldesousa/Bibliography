@@ -48,6 +48,13 @@
   Publisher                = {CODATA}
 }
 
+@Article{Butler2008,
+  Title                    = {The GeoJSON format specification},
+  Author                   = {Butler, Howard and Daly, Martin and Doyle, Allan and Gillies, Sean and Schaub, Tim and Schmidt, Christopher},
+  Journal                  = {URL: http://www.geojson.org/geojson-spec.html?` (accessed 29.11.2016)},
+  Year                     = {2008}
+}
+
 @Article{Carr1997,
   Title                    = {{ISEA Discrete Global Grids}},
   Author                   = {Carr, D. and Kahn, R. and Sahr, K. and Olsen, T.},
@@ -58,6 +65,52 @@
 
   Owner                    = {desouslu},
   Timestamp                = {2016.08.08}
+}
+
+@Article{Chaplot2006,
+  Title                    = {Accuracy of interpolation techniques for the derivation of digital elevation models in relation to landform types and data density},
+  Author                   = {Chaplot, Vincent and Darboux, Fr{\'e}d{\'e}ric and Bourennane, Hocine and Legu{\'e}dois, Sophie and Silvera, Norbert and Phachomphon, Konngkeo},
+  Journal                  = {Geomorphology},
+  Year                     = {2006},
+  Number                   = {1},
+  Pages                    = {126--141},
+  Volume                   = {77},
+
+  Publisher                = {Elsevier}
+}
+
+@InProceedings{Dutton1989,
+  Title                    = {Planetary modelling via hierarchical tessellation},
+  Author                   = {Dutton, Geoffrey},
+  Booktitle                = {Proc. Autocarto},
+  Year                     = {1989},
+  Pages                    = {462--471},
+  Volume                   = {9},
+
+  Abstract                 = {In encoding, simplifying, amalgamating and intersecting cartographic features, it is useful to know the precision of locational data being processed. It is suggested that representing spatial phenomena in a hierarchical tessellated framework can facilitate documenting the certainty of coordinates and in dealing with its consequences. Objects thus encoded can identify the precision with which they were measured, and can retrieved at lower degrees of precision, as appropriate. This scale sensitivity is an inherent aspect of quadtree and pyramid data structures, and one which the literature on GIS data quality has yet to address in detail. A specific hierarchical tessellation of the sphere into triangular facets is proposed as a basis for indexing planetary data; Although composed of triangular facets, the tessellation is a quadtree hierarchy. Its geometry is such that that its facets are planar, subdivide a sphere naturally and are efficient to address. Methods for generating and manipulating hierarchical planetary geocodes are described.},
+  Review                   = {. Sphere tesselated into triangular facets
+
+. Quadtrees are not able to provide a hierarchical tesselation of the sphere in a consistent manner
+
+. Proposes a triangular tesselation of an octahedron with two facet strucutres:
+ - 1, 4, 16, 64, 256 ...
+ - 8, 32, 128, 512, 2048 ...
+
+. Model is called Quaternary Triangular Mesh (QTM)
+
+. QTM can be used for geocoding.
+
+. geocode - hierachical address of a location on the planet
+
+. QTM defines three interlocking triangular grids of hexagons, covering 75% of the planet, with triangles covering the other 25%.
+
+. QTM addresses can replace coordinates in a georeferenced database
+
+. Trilocation => derivation of facet addresses (geocodes) from geographic coordinates (Dutton 1984a).
+
+"It is generally assumed that coordinates exist in nature, when in fact they are rather artificial notations for spatial phenomena. Features in a GIS do not actually have coordinates, coordinates are in fact ascribed to them..."
+
+=> No discussion of cartographic projections}
 }
 
 @Article{Frisch1986,
@@ -71,6 +124,33 @@
 
   Owner                    = {desouslu},
   Timestamp                = {2016.08.08}
+}
+
+@InProceedings{GibsonLucas1982,
+  Title                    = {Spatial data processing using generalized balanced ternary},
+  Author                   = {Gibson, Laurie and Lucas, Dean},
+  Booktitle                = {Proceedings of the IEEE Conference on Pattern Recognition and Image Processing},
+  Year                     = {1982},
+  Pages                    = {566--571},
+
+  Review                   = {. Balanced notational systems differ from unbalanced ones like decimal or octal in that they are symmetric about the origin.
+
+. GBT is a hierarchy of cells.
+
+. permutahedron: agregation of basic cells (hexagons in 2D)
+
+. permutahedrons keep anisotropic neighbourhood properties
+
+. The difference of two GBT addresses is precisely the GBT address of the vector between them
+
+
+=> Cells are not just a division of the Cartographic space, they become geolocation elements
+
+=> GBT is not an addressing system for elements in the Cartesian system, but rather a complete replacement.
+
+=> How neighbourg works?
+
+=> Euclidian space}
 }
 
 @Article{Goolay1969,
@@ -108,6 +188,26 @@
   Number                   = {6},
   Pages                    = {930-949},
   Volume                   = {67}
+}
+
+@Article{vanRoessel1988,
+  Title                    = {Conversion of Cartesian coordinates from and to generalized balanced ternary addresses},
+  Author                   = {van Roessel, Jan W},
+  Journal                  = {Photogrammetric Engineering and Remote Sensing},
+  Year                     = {1988},
+  Number                   = {11},
+  Pages                    = {1565--1570},
+  Volume                   = {54},
+
+  Abstract                 = {Hexagonal grids have several advantages over square grids, such as a greater angular resolution and unambiguous connectivity. The Generalized Balanced Ternary (GBT) system is a spatial addressing method for hexagonal grids in which the hexagons are arranged in hierarchical aggregates, and which accommodates vector operations in GBT space. Efficient algorithms for converting Cartesian coordinates from and to GBT addresses are based on the dual representation of the hexagonal tessellation. The GBT-to-Cartesian algorithm is an order of magnitude faster than the Cartesian-to-GBT algorithm, the latter requiring interpolation and GBT addition for each digit of the generated GBT address.},
+  Review                   = {. Crettez (1980) : hexagons offer greater angular resolution
+
+. Addition in the GBT space requires a look up table for single digit operations.
+
+. Addresses in a GBT can be arranged in the form of a tree.
+
+. Cartesian to GBT: O(n²)
+. GBT to Cartesian: O(n)}
 }
 
 @Article{SahrWhite1998,
@@ -259,6 +359,44 @@
 
   Owner                    = {desouslu},
   Timestamp                = {2016.08.08}
+}
+
+@InProceedings{Tong2010,
+  Title                    = {A New Effective Hexagonal Discrete Global Grid System: Hexagonal Quad Balanced Structure},
+  Author                   = {Tong, Xiaochong and Ben, Jin and Wang, Ying},
+  Booktitle                = {18th International Conference on Geoinformatics},
+  Year                     = {2010},
+  Organization             = {IEEE},
+  Pages                    = {1--6},
+
+  Review                   = {. English in this article is very bad and some segments are not understandable
+
+. studies of Saff and Kuijlaars [14], Kimerling [15] and so
+on prove that the advantages of hexagon girds can be extended
+to sphere gird system. 
+
+. Hexagonal Quad Balanced Structure (HQBT)
+
+. Uses a double geometric partition of the hexagon that complement each other at the 3rd level
+
+. This hierarchy is then quadtree 
+  - each node has tree children 
+  - there are gaps in top levels
+
+. The space covered by the 3rd level system forms a triangle
+
+. This triangle is then matched to a face of the icosahedron
+
+. Relies on a lookup table for vector adition}
+}
+
+@InCollection{Warmerdam2008,
+  Title                    = {The geospatial data abstraction library},
+  Author                   = {Warmerdam, Frank},
+  Booktitle                = {Open Source Approaches in Spatial Data Handling},
+  Publisher                = {Springer},
+  Year                     = {2008},
+  Pages                    = {87--104}
 }
 
 @Article{White1992,
